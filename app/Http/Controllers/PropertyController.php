@@ -24,7 +24,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        //
+        return view('properties.create');
     }
 
     /**
@@ -35,7 +35,20 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $attributes = $request->validate($request->all());
+
+        // $attributes['slide_1'] = $request->file('slide_1')->store('property-images');
+        // $attributes['slide_2'] = $request->file('slide_2')->store('property-images');
+        // $attributes['slide_3'] = $request->file('slide_3')->store('property-images');
+        // $attributes['slide_4'] = $request->file('slide_4')->store('property-images');
+        // $attributes['slide_5'] = $request->file('slide_5')->store('property-images');
+        // $attributes['floor_plan'] = $request->file('floor_plan')->store('property-images');
+        // $attributes['user_id'] = auth()->id();
+
+
+        // Property::create($attributes);
+
+        // return back()->with('success', 'Property Added Succesfully!');
     }
 
     /**
