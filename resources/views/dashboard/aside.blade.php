@@ -9,7 +9,9 @@
               class="sidebar-link waves-effect waves-dark sidebar-link"
               href="{{ route('dashboard') }}"
               aria-expanded="false"
-              ><span class="hide-menu">Dashboard</span></a
+              >
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="hide-menu ml-2">Dashboard</span></a
             >
           </li>
           @if (auth()->user()->role === 'admin')
@@ -20,7 +22,7 @@
               aria-expanded="false"
               >
               <i class="fas fa-users"></i>
-              <span class="hide-menu">All Agents</span></a
+              <span class="hide-menu ml-2">All Agents</span></a
             >
           </li>
           <li class="sidebar-item">
@@ -30,29 +32,29 @@
               aria-expanded="false"
               >
               <i class="fas fa-user-plus"></i>
-              <span class="hide-menu">Add Agent</span></a
+                <span class="hide-menu ml-2">Add Agent</span></a
             >
           </li>
           @endif
           <li class="sidebar-item">
             <a
               class="sidebar-link waves-effect waves-dark sidebar-link"
-              href="#"
+              href="/dashboard/properties/"
               aria-expanded="false"
               >
 
               <i class="mdi mdi-domain"></i>
-              <span class="hide-menu">All Properties</span></a
+              <span class="hide-menu ml-2">All Properties</span></a
             >
           </li>
           <li class="sidebar-item">
             <a
               class="sidebar-link waves-effect waves-dark sidebar-link"
-              href="{{ route('property-create') }}"
+              href="/dashboard/properties/create/"
               aria-expanded="false"
               >
               <i class="fas fa-building"></i>
-              <span class="hide-menu">Add Property</span></a
+              <span class="hide-menu ml-2 ">Add Property</span></a
             >
           </li>
         </ul>

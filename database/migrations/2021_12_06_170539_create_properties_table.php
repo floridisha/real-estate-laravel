@@ -19,9 +19,9 @@ class CreatePropertiesTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('location');
-            $table->string('amenitie_1')->nullable();
-            $table->string('amenitie_2')->nullable();
-            $table->string('amenitie_3')->nullable();
+            $table->string('amenitie_1');
+            $table->string('amenitie_2');
+            $table->string('amenitie_3');
             $table->string('amenitie_4')->nullable();
             $table->string('amenitie_5')->nullable();
             $table->string('amenitie_6')->nullable();
@@ -35,12 +35,13 @@ class CreatePropertiesTable extends Migration
             $table->integer('bathrooms');
             $table->integer('garage');
             $table->float('price');
-            $table->string('slide_1')->nullable();
-            $table->string('slide_2')->nullable();
-            $table->string('slide_3')->nullable();
-            $table->string('slide_4')->nullable();
-            $table->string('slide_5')->nullable();
+            $table->string('slide_1');
+            $table->string('slide_2');
+            $table->string('slide_3');
+            $table->string('slide_4');
+            $table->string('slide_5');
             $table->string('floor_plan')->nullable();
+            $table->enum('is_featured', ['Yes', 'No'])->default('No');
             $table->timestamps();
         });
     }

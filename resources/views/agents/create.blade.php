@@ -148,13 +148,8 @@
                   class="dropdown-menu dropdown-menu-end user-dd animated"
                   aria-labelledby="navbarDropdown"
                 >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a
-                  >
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="mdi mdi-settings me-1 ms-1"></i> Account
-                    Setting</a
+                  <a class="dropdown-item" href="{{ route('home') }}"
+                    ><i class="mdi mdi-home me-1 ms-1"></i> Home</a
                   >
                   <div class="dropdown-divider"></div>
                   <div class="ps-4 p-10">

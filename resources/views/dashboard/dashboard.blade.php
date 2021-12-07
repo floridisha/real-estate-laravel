@@ -28,6 +28,7 @@
     />
     <link href="{{ asset('assets/extra-libs/calendar/calendar.css') }}" rel="stylesheet" />
     <link href="{{ asset('dist/css/style.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
   </head>
 
   <body>
@@ -137,13 +138,8 @@
                   class="dropdown-menu dropdown-menu-end user-dd animated"
                   aria-labelledby="navbarDropdown"
                 >
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a
-                  >
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="javascript:void(0)"
-                    ><i class="mdi mdi-settings me-1 ms-1"></i> Account
-                    Setting</a
+                  <a class="dropdown-item" href="{{ route('home') }}"
+                    ><i class="mdi mdi-home me-1 ms-1"></i> Home</a
                   >
                   <div class="dropdown-divider"></div>
                   <div class="ps-4 p-10">
@@ -188,8 +184,22 @@
 
         <div class="container-fluid">
           <div class="row">
+            @if (session()->has('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+            @endif
             <div class="card">
               <div class="card-body">
+                 @if (auth()->user()->role !== 'admin')
+                    <h3 class="px-2 py-3">Welcome to your dashboard, {{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</h3>
+                    <div class="row">
+                        <div class="col">
+                            <a class="btn bg-b text-white px-4 py-2 mr-3" href="/dashboard/properties/">All Properties</a>
+                            <a class="btn bg-b text-white px-4 py-2 ml-3" href="/dashboard/properties/create">Add Properties</a>
+                        </div>
+                    </div>
+                 @else
                 <div class="table-responsive">
                   <table
                     id="zero_config"
@@ -239,12 +249,15 @@
                     </tbody>
                   </table>
                 </div>
+                @endif
               </div>
             </div>
           </div>
         </div>
 
+        @if (auth()->user()->role === 'admin')
         <x-delete-confirm :agent="$agent" />
+        @endif
 
         <footer class="footer text-center">
           Designed and Developed by Flori Disha

@@ -48,6 +48,7 @@
                         </div>
                         <select name="role" class="custom-select form-control" id="role">
                           <option selected disabled></option>
+                          <option value="admin">admin</option>
                           <option value="Agent">Agent</option>
                           <option value="Office Manager">Office Manager</option>
                           <option value="CEO">CEO</option>

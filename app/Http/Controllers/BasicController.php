@@ -13,4 +13,5 @@ class BasicController extends Controller
             'agents' => User::all()
         ]);
     }
+
 }
