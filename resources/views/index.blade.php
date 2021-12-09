@@ -14,7 +14,7 @@
   <!--/ Nav End /-->
 
   <!--/ Carousel Star /-->
-  <x-carousel-home />
+  <x-carousel-home :featured="$featured" />
   <!--/ Carousel end /-->
 
   <!--/ Services Star /-->
@@ -108,11 +108,11 @@
   <!--/ Services End /-->
 
   <!--/ Property Star /-->
-  <x-latest-properties />
+  <x-latest-properties :properties="$properties" />
   <!--/ Property End /-->
 
   <!--/ Agents Star /-->
-  <x-featured-agents />
+  <x-featured-agents :agents="$agents" />
   <!--/ Agents End /-->
 
   <!--/ footer Star /-->

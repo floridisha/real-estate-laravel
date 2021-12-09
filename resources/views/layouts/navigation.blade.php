@@ -107,19 +107,19 @@
       <div class="navbar-collapse collapse justify-content-end mr-4" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="property-grid.html">Properties</a>
+            <a class="nav-link {{ Request::is('properties-list') ? 'active' : '' }}" href="{{ route('properties-list') }}">Properties</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="property-grid.html">Agents</a>
+            <a class="nav-link {{ Request::is('agents-listing') ? 'active' : '' }}" href="{{ route('agents-listing') }}">Agents</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
           </li>
           @auth
             <li class="nav-item">

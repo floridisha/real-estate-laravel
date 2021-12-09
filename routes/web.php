@@ -5,9 +5,11 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\BasicController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [BasicController::class, 'home'])->name('home');
+Route::get('/about', [BasicController::class, 'about'])->name('about');
+Route::get('/contact', [BasicController::class, 'contact'])->name('contact');
+Route::get('/properties', [BasicController::class, 'properties'])->name('properties-list');
+Route::get('/agents-list', [BasicController::class, 'agentList'])->name('agents-listing');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [BasicController::class, 'dashboard'])->name('dashboard');
