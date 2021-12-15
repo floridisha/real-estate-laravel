@@ -19,8 +19,7 @@
       <div class="row">
         <div class="col-md-12 col-lg-8">
           <div class="title-single-box">
-            <h1 class="title-single">Our Amazing Properties</h1>
-            <span class="color-text-a">Grid Properties</span>
+            <h1 class="title-single">Search Results</h1>
           </div>
         </div>
         <div class="col-md-12 col-lg-4">
@@ -30,7 +29,7 @@
                 <a href="{{ route('home') }}">Home</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Properties Grid
+                Search Results
               </li>
             </ol>
           </nav>
@@ -67,7 +66,7 @@
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="{{ route('property-detail',  $property->id) }}">{{$property->location}}</a>
+                      <a href="#">{{$property->location}}</a>
                     </h2>
                   </div>
                   <div class="card-body-a">

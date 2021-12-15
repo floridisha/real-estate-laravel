@@ -15,7 +15,7 @@
                         <h1 class="intro-title mb-4">
                           <span class="color-b">{{ $feature->title }}</h1>
                         <p class="intro-subtitle intro-price">
-                          <a href="#"><span class="price-a">{{ $feature->status }} | $ {{ $feature->price }}</span></a>
+                          <a href="{{ route('property-detail', $feature->id) }}"><span class="price-a">{{ $feature->status }} | $ {{ $feature->price }}</span></a>
                         </p>
                       </div>
                     </div>

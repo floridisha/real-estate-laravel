@@ -59,10 +59,20 @@ class BasicController extends Controller
 
     public function agentList()
     {
-        $agents = User::paginate(6);
+        $agents = User::where('id', '!=', '1')->latest()->paginate(6);
 
         return view('agents-list', [
             'agents' => $agents
+        ]);
+    }
+
+
+    public function searchResults()
+    {
+        $properties = Property::latest()->filter(request(['keyword', 'type', 'location', 'bedrooms', 'garage', 'bathrooms', 'price']))->paginate(6)->withQueryString();
+
+        return view('search-result', [
+            'properties' => $properties
         ]);
     }
 

@@ -10,6 +10,9 @@ Route::get('/about', [BasicController::class, 'about'])->name('about');
 Route::get('/contact', [BasicController::class, 'contact'])->name('contact');
 Route::get('/properties', [BasicController::class, 'properties'])->name('properties-list');
 Route::get('/agents-list', [BasicController::class, 'agentList'])->name('agents-listing');
+Route::get('/search-result', [BasicController::class, 'searchResults'])->name('search-result');
+Route::get('/properties/{property}/', [PropertyController::class, 'show'])->name('property-detail');
+Route::get('/agents/{agent}/', [AgentController::class, 'show'])->name('agent-detail');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [BasicController::class, 'dashboard'])->name('dashboard');

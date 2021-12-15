@@ -55,7 +55,7 @@
                 <div class="card-header-d">
                   <div class="card-title-d align-self-center">
                     <h3 class="title-d">
-                      <a href="#" class="link-two">{{ $agent->first_name }}
+                      <a href="{{ route('agent-detail', $agent->id) }}" class="link-two">{{ $agent->first_name }}
                         <br> {{ $agent->last_name }}</a>
                     </h3>
                   </div>

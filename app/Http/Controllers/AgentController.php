@@ -70,7 +70,9 @@ class AgentController extends Controller
      */
     public function show(User $agent)
     {
-        //
+        return view('agents.show', [
+            'agent' => $agent
+        ]);
     }
 
     /**

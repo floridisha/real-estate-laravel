@@ -4,81 +4,54 @@
     </div>
     <span class="close-box-collapse right-boxed ion-ios-close"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a">
+      <form method="GET" action="{{ route('search-result') }}" class="form-a">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
-              <label for="Type">Keyword</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="Keyword">
+              <label for="keyword">Keyword</label>
+              <input type="text" name="keyword" class="form-control form-control-lg form-control-a" placeholder="Keyword">
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
-              <label for="Type">Type</label>
-              <select class="form-control form-control-lg form-control-a" id="Type">
-                <option>All Type</option>
-                <option>For Rent</option>
-                <option>For Sale</option>
-                <option>Open House</option>
+              <label for="type">Type</label>
+              <select name="type" class="form-control form-control-lg form-control-a" id="type">
+                <option value="" selected disabled></option>
+                <option value="House">House</option>
+                <option value="Appartament">Appartament</option>
+                <option value="Commercial Space">Commercial Space</option>
+                <option value="Land">Land</option>
               </select>
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
-              <label for="city">City</label>
-              <select class="form-control form-control-lg form-control-a" id="city">
-                <option>All City</option>
-                <option>Alabama</option>
-                <option>Arizona</option>
-                <option>California</option>
-                <option>Colorado</option>
-              </select>
+              <label for="location">Location</label>
+                <input type="text" class="form-control form-control-lg form-control-a" name="location" id="location">
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="bedrooms">Bedrooms</label>
-              <select class="form-control form-control-lg form-control-a" id="bedrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
+              <input type="number" class="form-control form-control-lg form-control-a" name="bedrooms" id="bedrooms">
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="garages">Garages</label>
-              <select class="form-control form-control-lg form-control-a" id="garages">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-              </select>
+              <input type="number" class="form-control form-control-lg form-control-a" name="garages" id="garages">
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
               <label for="bathrooms">Bathrooms</label>
-              <select class="form-control form-control-lg form-control-a" id="bathrooms">
-                <option>Any</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-              </select>
+              <input type="number" class="form-control form-control-lg form-control-a" name="bathrooms" id="bathrooms">
             </div>
           </div>
           <div class="col-md-6 mb-2">
             <div class="form-group">
-              <label for="price">Min Price</label>
-              <select class="form-control form-control-lg form-control-a" id="price">
-                <option>Unlimite</option>
-                <option>$50,000</option>
-                <option>$100,000</option>
-                <option>$150,000</option>
-                <option>$200,000</option>
-              </select>
+              <label for="price">Max Price</label>
+              <input type="number" class="form-control form-control-lg form-control-a" name="price" id="price">
             </div>
           </div>
           <div class="col-md-12">
